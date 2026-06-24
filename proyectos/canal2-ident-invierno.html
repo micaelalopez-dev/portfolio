@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nombre del proyecto — Micaela López</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  /* Estilos específicos de página de proyecto */
+
+  .proyecto-hero {
+    padding: 140px 2rem 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .proyecto-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: color 0.2s;
+  }
+
+  .proyecto-volver:hover { color: var(--bordeaux); }
+
+  .proyecto-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .proyecto-badge {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    background: var(--bordeaux);
+    color: var(--blanco);
+  }
+
+  .proyecto-badge-outline {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--crema-oscura);
+    color: var(--gris);
+  }
+
+  .proyecto-titulo-grande {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--carbon);
+    margin-bottom: 1.5rem;
+  }
+
+  .proyecto-titulo-grande em {
+    font-style: italic;
+    color: var(--bordeaux);
+  }
+
+  .proyecto-intro {
+    font-size: 1.15rem;
+    color: var(--gris);
+    line-height: 1.75;
+    max-width: 680px;
+    margin-bottom: 3rem;
+    border-left: 2px solid var(--bordeaux);
+    padding-left: 1.5rem;
+  }
+
+  /* IMAGEN PRINCIPAL */
+  .proyecto-cover {
+    width: 100%;
+    aspect-ratio: 16/7;
+    background: var(--crema-oscura);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gris-claro);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .proyecto-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  /* CONTENIDO */
+  .proyecto-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .proyecto-body h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--carbon);
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .proyecto-body h2:first-child { margin-top: 0; }
+
+  .proyecto-body p {
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  /* SIDEBAR */
+  .proyecto-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .sidebar-bloque {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--crema-oscura);
+  }
+
+  .sidebar-bloque:last-child {
+    border-bottom: none;
+  }
+
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-valor {
+    font-size: 0.95rem;
+    color: var(--carbon);
+    line-height: 1.6;
+  }
+
+  .sidebar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .sidebar-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--crema-oscura);
+    color: var(--gris);
+  }
+
+  /* GALERÍA */
+  .proyecto-galeria {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 80px;
+  }
+
+  .galeria-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+    margin-bottom: 1.5rem;
+  }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .galeria-item {
+    aspect-ratio: 4/3;
+    background: var(--crema-oscura);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gris-claro);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  /* VIDEO EMBED */
+  .proyecto-video {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 80px;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 16/9;
+    background: var(--carbon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gris);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* NAVEGACIÓN ENTRE PROYECTOS */
+  .proyecto-nav {
+    border-top: 1px solid var(--crema-oscura);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .proyecto-nav-item {
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .proyecto-nav-item:hover { background: var(--crema-oscura); }
+
+  .proyecto-nav-item.siguiente { text-align: right; border-left: 1px solid var(--crema-oscura); }
+
+  .proyecto-nav-dir {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris-claro);
+    margin-bottom: 0.5rem;
+  }
+
+  .proyecto-nav-nombre {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--carbon);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .proyecto-contenido { grid-template-columns: 1fr; gap: 2.5rem; }
+    .proyecto-sidebar { position: static; }
+    .proyecto-nav { grid-template-columns: 1fr; }
+    .proyecto-nav-item.siguiente { text-align: left; border-left: none; border-top: 1px solid var(--crema-oscura); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">Micaela López</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#trabajos">Trabajos</a></li>
+    <li><a href="../index.html#sobre">Sobre mí</a></li>
+    <li><a href="../index.html#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO DEL PROYECTO -->
+<div class="proyecto-hero">
+  <a href="../index.html#trabajos" class="proyecto-volver">← Volver al portfolio</a>
+
+  <div class="proyecto-meta">
+    <span class="proyecto-badge">Canal 2 Fiberway</span>
+    <!-- Agregá más badges según corresponda -->
+    <span class="proyecto-badge-outline">Motion</span>
+    <span class="proyecto-badge-outline">2025</span>
+  </div>
+
+  <h1 class="proyecto-titulo-grande">
+    Identidad visual<br>
+    <em>de invierno</em>
+  </h1>
+
+  <p class="proyecto-intro">
+    Frame ident con efecto de tipografía integrada al paisaje jujeño. Animación desarrollada en After Effects para la señal de Canal 2 Fiberway.
+    <!-- Reemplazá con la descripción real del proyecto -->
+  </p>
+</div>
+
+<!-- IMAGEN PRINCIPAL -->
+<div class="proyecto-cover" style="max-width: 100%; margin: 0 0 80px;">
+  <!-- <img src="../assets/canal2-ident-cover.jpg" alt="Identidad visual de invierno Canal 2"> -->
+  imagen principal del proyecto
+</div>
+
+<!-- CONTENIDO PRINCIPAL + SIDEBAR -->
+<div class="proyecto-contenido">
+  <div class="proyecto-body">
+
+    <h2>El contexto</h2>
+    <p>
+      Canal 2 Fiberway necesitaba una identidad visual estacional para la temporada de invierno que integrara el paisaje jujeño con su identidad de marca.
+      <!-- Contá el contexto real del proyecto -->
+    </p>
+
+    <h2>El proceso</h2>
+    <p>
+      El concepto partió de fotografías del altiplano y la quebrada. La idea fue que la tipografía no compitiera con el paisaje sino que viviera dentro de él, usando técnicas de enmascaramiento en After Effects.
+      <!-- Contá cómo lo resolviste -->
+    </p>
+
+    <h2>El resultado</h2>
+    <p>
+      Una pieza de 10 segundos que se usó como separador de programación y en redes sociales. El ident logró una identidad reconocible que conectó la señal con la identidad regional.
+      <!-- Contá qué pasó después -->
+    </p>
+
+  </div>
+
+  <aside class="proyecto-sidebar">
+
+    <div class="sidebar-bloque">
+      <p class="sidebar-label">Cliente</p>
+      <p class="sidebar-valor">Canal 2 Jujuy – Fiberway</p>
+    </div>
+
+    <div class="sidebar-bloque">
+      <p class="sidebar-label">Año</p>
+      <p class="sidebar-valor">2025</p>
+    </div>
+
+    <div class="sidebar-bloque">
+      <p class="sidebar-label">Rol</p>
+      <p class="sidebar-valor">Diseño, animación y dirección artística</p>
+    </div>
+
+    <div class="sidebar-bloque">
+      <p class="sidebar-label">Herramientas</p>
+      <div class="sidebar-tags">
+        <span class="sidebar-tag">After Effects</span>
+        <span class="sidebar-tag">Illustrator</span>
+        <span class="sidebar-tag">Photoshop</span>
+      </div>
+    </div>
+
+    <div class="sidebar-bloque">
+      <p class="sidebar-label">Categoría</p>
+      <div class="sidebar-tags">
+        <span class="sidebar-tag">Motion</span>
+        <span class="sidebar-tag">Canal 2</span>
+        <span class="sidebar-tag">Identidad visual</span>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- GALERÍA -->
+<div class="proyecto-galeria">
+  <p class="galeria-label">Imágenes del proyecto</p>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <!-- <img src="../assets/canal2-ident-1.jpg" alt=""> -->
+      imagen 1
+    </div>
+    <div class="galeria-item">
+      <!-- <img src="../assets/canal2-ident-2.jpg" alt=""> -->
+      imagen 2
+    </div>
+    <div class="galeria-item">
+      <!-- <img src="../assets/canal2-ident-3.jpg" alt=""> -->
+      imagen 3
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO (opcional, descommentá si aplica) -->
+<!--
+<div class="proyecto-video">
+  <p class="galeria-label">Video del proyecto</p>
+  <div class="video-wrapper">
+    video aquí — podés pegar un iframe de YouTube/Vimeo
+  </div>
+</div>
+-->
+
+<!-- NAVEGACIÓN ENTRE PROYECTOS -->
+<div class="proyecto-nav">
+  <a href="proyecto-anterior.html" class="proyecto-nav-item anterior">
+    <p class="proyecto-nav-dir">← Anterior</p>
+    <p class="proyecto-nav-nombre">Nombre del proyecto anterior</p>
+  </a>
+  <a href="proyecto-siguiente.html" class="proyecto-nav-item siguiente">
+    <p class="proyecto-nav-dir">Siguiente →</p>
+    <p class="proyecto-nav-nombre">Nombre del proyecto siguiente</p>
+  </a>
+</div>
+
+<footer>
+  © 2025 Micaela López · Palpalá, Jujuy, Argentina
+</footer>
+
+</body>
+</html>
