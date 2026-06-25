@@ -499,62 +499,39 @@
   .timeline {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    border-left: 1px solid rgba(0,0,0,0.12);
   }
 
   .timeline-item {
     display: grid;
-    grid-template-columns: 1fr 48px 1fr;
-    gap: 0;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem 0 2rem 2.5rem;
     position: relative;
-    padding: 2.5rem 0;
     border-bottom: 1px solid rgba(0,0,0,0.06);
   }
 
   .timeline-item:last-child { border-bottom: none; }
 
-  .timeline-centro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-
-  .timeline-centro::before {
+  .timeline-item::before {
     content: '';
     position: absolute;
-    top: 0; bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    background: rgba(0,0,0,0.12);
-  }
-
-  .timeline-dot {
-    width: 12px;
-    height: 12px;
+    left: -5px;
+    top: 2.4rem;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     background: var(--bordeaux);
-    position: relative;
-    z-index: 1;
-    margin-top: 0.25rem;
-    flex-shrink: 0;
   }
-
-  .timeline-lado {
-    padding: 0 2rem;
-  }
-
-  .timeline-lado.izquierda { text-align: right; }
-  .timeline-lado.derecha { text-align: left; }
 
   .timeline-fecha {
     font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--bordeaux);
-    margin-bottom: 0.5rem;
+    padding-top: 0.15rem;
+    line-height: 1.5;
   }
 
   .timeline-rol {
@@ -586,13 +563,8 @@
     line-height: 1.6;
   }
 
-  .timeline-lado.izquierda .timeline-lista li::after {
-    content: ' ·';
-    color: var(--bordeaux);
-  }
-
-  .timeline-lado.derecha .timeline-lista li::before {
-    content: '· ';
+  .timeline-lista li::before {
+    content: '— ';
     color: var(--bordeaux);
   }
 
@@ -604,11 +576,6 @@
     .sobre-col-titulo { position: static; }
     .sobre-titulo { font-size: 2rem; }
     .tools-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-    .timeline-item { grid-template-columns: 1fr; }
-    .timeline-centro { display: none; }
-    .timeline-lado { padding: 0; text-align: left !important; }
-    .timeline-lado.izquierda:empty, .timeline-lado.derecha:empty { display: none; }
-    .timeline-lado.izquierda .timeline-lista li::after { content: ''; }
-    .timeline-lado.derecha .timeline-lista li::before { content: ''; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .nav-links { display: none; }
   }
