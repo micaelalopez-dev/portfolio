@@ -1,0 +1,53 @@
+CÓMO NOMBRAR TUS IMÁGENES
+=========================
+
+Esta carpeta es para las imágenes de TUS PROYECTOS.
+(Los recursos genéricos del sitio van en assets/img/, y el diseño
+en assets/css/ — mirá el LEEME de esa carpeta.)
+
+
+Guardá en esta carpeta las imágenes con estos nombres exactos
+(formato .jpg, ideal 1600px de ancho, comprimidas con tinypng.com o similar).
+Si una imagen no existe, el sitio NO se rompe: muestra un placeholder
+celeste con el texto "// imagen pendiente".
+
+PORTADAS (aparecen en las cards del index):
+  ecojuy.jpg
+  4autovias.jpg
+  salud-jujuy.jpg
+  canal2.jpg
+  radio-vision.jpg
+  casona-la-felipa.jpg
+  spotify-2024.jpg
+
+PROYECTOS INDIVIDUALES (imagen principal = la portada; galería = -2 y -3):
+  ecojuy.jpg + ecojuy-2.jpg + ecojuy-3.jpg
+  4autovias.jpg + 4autovias-2.jpg + 4autovias-3.jpg
+  salud-jujuy.jpg + salud-jujuy-2.jpg + salud-jujuy-3.jpg
+  casona-la-felipa.jpg + casona-la-felipa-2.jpg + casona-la-felipa-3.jpg
+  spotify-2024.jpg + spotify-2024-2.jpg + spotify-2024-3.jpg
+
+COLECCIÓN CANAL 2 (una imagen por pieza):
+  canal2-mundial.jpg        → Banner Mundial 2026
+  canal2-invierno.jpg       → Identidad de invierno
+  canal2-pantalla.jpg       → Gráfica en pantalla
+  canal2-institucional.jpg  → Comunicación institucional
+  canal2-coberturas.jpg     → Coberturas especiales (FNE)
+
+COLECCIÓN RADIO VISIÓN JUJUY (una imagen por pieza):
+  radio-vision-avatares.jpg → Avatares para streaming
+  radio-vision-artistica.jpg→ Artística de transmisiones
+  radio-vision-grafica.jpg  → Gráfica para el grupo
+  radio-vision-web.jpg      → Portal Somos Jujuy
+
+PARA AGREGAR UNA PIEZA NUEVA A UNA COLECCIÓN:
+  Abrí proyectos/canal2.html (o radio-vision.html), buscá el comentario
+  "PIEZAS", duplicá un bloque <article class="pieza">...</article>,
+  cambiale título, texto y nombre de imagen. Listo.
+
+GALERÍAS DE PIEZAS (opcional, 2 imágenes más por pieza):
+  Cada pieza tiene su propia página con galería. Usá el nombre
+  de la pieza + -2 y -3. Ejemplos:
+    canal2-mundial-2.jpg / canal2-mundial-3.jpg
+    radio-vision-avatares-2.jpg / radio-vision-avatares-3.jpg
+  ... y así con todas.

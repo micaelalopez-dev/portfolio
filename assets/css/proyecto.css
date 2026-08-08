@@ -1,0 +1,89 @@
+/* ============================================
+   PROYECTOS — páginas internas minimalistas
+   (la paleta vive en base.css)
+   ============================================ */
+
+/* ancho de lectura propio, más angosto que el index */
+:root{--maxw:920px}
+
+/* ---------- CABECERA ---------- */
+header{max-width:var(--maxw);margin:0 auto;padding:90px 28px 56px}
+.sec-label{
+  font-family:var(--font-ui);
+  font-size:12px;color:var(--accent);margin-bottom:14px;
+}
+h1{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(38px,6vw,70px);line-height:1.06;letter-spacing:-.01em;
+  margin-bottom:24px;
+}
+.intro{font-size:17.5px;color:var(--text-2);max-width:640px;margin-bottom:38px}
+.meta{
+  display:flex;flex-wrap:wrap;gap:14px 48px;
+  padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+.meta div span:first-child{
+  display:block;font-family:var(--font-ui);
+  font-size:11px;color:var(--accent);margin-bottom:2px;
+}
+.meta div span:last-child{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:22px}
+.tags span{font-family:var(--font-ui);font-size:11.5px;color:var(--text-2)}
+.tags span::before{content:'· ';color:var(--accent)}
+
+/* ---------- CONTENIDO ---------- */
+main{max-width:var(--maxw);margin:0 auto;padding:40px 28px 100px}
+.media{
+  aspect-ratio:16/9;border-radius:10px;background:#EFEDE8;
+  overflow:hidden;position:relative;margin-bottom:64px;
+}
+.media::after{
+  content:'// imagen pendiente';
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-ui);font-size:12px;color:var(--text-2);
+}
+.media img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+h2{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(26px,3.5vw,38px);margin-bottom:22px;line-height:1.15;
+}
+.texto{color:var(--text-2);max-width:640px;margin-bottom:56px}
+.texto strong{color:var(--text);font-weight:600}
+.hice{list-style:none;max-width:640px;margin-bottom:64px;border-top:1px solid var(--line)}
+.hice li{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;font-size:15px}
+.hice li::before{content:'—';color:var(--accent);font-weight:600}
+.galeria{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;margin-bottom:64px;
+}
+.galeria .media{aspect-ratio:4/3;margin-bottom:0}
+
+/* ---------- PIEZAS (colecciones) ---------- */
+.piezas{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:52px 36px;margin-bottom:64px;
+}
+.pieza{display:flex;flex-direction:column}
+.pieza .media{aspect-ratio:4/3;margin-bottom:16px}
+.pieza:hover .media img{transform:scale(1.05)}
+.pieza-tag{font-family:var(--font-ui);font-size:11px;color:var(--text-2)}
+.pieza-tag::before{content:'· ';color:var(--accent)}
+.pieza h3{font-family:var(--font-display);font-weight:500;font-size:23px;margin-top:6px;line-height:1.2}
+.pieza p{font-size:14.5px;color:var(--text-2);margin-top:8px;flex-grow:1}
+.pieza-ver{
+  display:inline-flex;gap:8px;align-self:flex-start;
+  font-size:14px;font-weight:600;color:var(--text);margin-top:14px;
+  transition:gap .25s,color .25s;
+}
+.pieza:hover .pieza-ver{gap:13px;color:var(--accent)}
+
+/* ---------- NAVEGACIÓN INFERIOR ---------- */
+.cta-fila{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:560px){
+  body{padding-top:62px}
+  header{padding:60px 20px 44px}
+  main{padding:32px 20px 80px}
+}

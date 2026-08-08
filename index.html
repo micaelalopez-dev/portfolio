@@ -3,346 +3,469 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Micaela López — Portfolio</title>
-<link rel="stylesheet" href="styles.css">
+<title>Micaela López — Comunicación, diseño y datos</title>
+<meta name="description" content="Portfolio de Micaela López. Diseño, produzco y comunico. Todo en el mismo lugar. Jujuy, Argentina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital@1&family=Poppins:wght@300;400;500;600&family=Montserrat+Alternates:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- QUICHE SANS (Adobe Fonts): pegá acá el <link> de tu Web Project de fonts.adobe.com -->
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Micaela López</a>
-  <ul class="nav-links">
-    <li><a href="#trabajos">Trabajos</a></li>
-    <li><a href="#sobre">Sobre mí</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Mica<em>.</em></a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#que-hago" data-i18n="nav_quehago">Qué hago</a></li>
+      <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+      <li><a href="#sobre-mi" data-i18n="nav_sobremi">Sobre mí</a></li>
+      <li><a href="#formacion" data-i18n="nav_formacion">Formación</a></li>
+      <li><a href="proyectos/experiencia.html" data-i18n="nav_exp">Experiencia</a></li>
+      <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+      <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language / Cambiar idioma">EN</button></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <p class="hero-eyebrow">Portfolio 2026</p>
-      <h1 class="hero-titulo">
-        Diseño, produzco y comunico.<br>
-        <em>Todo en el mismo lugar.</em>
-      </h1>
-      <p class="hero-bajada">
-        Diseño gráfico, producción audiovisual y comunicación estratégica para instituciones y medios. Jujuy, Argentina.
-      </p>
-      <blockquote class="hero-quote">
-        "Me muevo entre tecnología y ciencias sociales porque creo que la comunicación merece los dos."
-      </blockquote>
-      <a href="#trabajos" class="hero-cta">Ver trabajos →</a>
-    </div>
+<header>
+  <div class="hero-main">
+    <p class="hero-line"><span id="typed"></span><span class="cursor" aria-hidden="true"></span></p>
+    <p class="hero-name reveal">Micaela López</p>
+    <h1 class="reveal d1" data-i18n="hero_h1">Diseño, produzco y <em>comunico</em>. Todo en el mismo lugar.</h1>
+    <p class="hero-desc reveal d2" data-i18n="hero_desc">Trabajo en <strong>comunicación institucional, producción audiovisual y motion graphics</strong> desde Jujuy, Argentina — y me muevo con la misma comodidad entre una pieza gráfica y una base de datos.</p>
+    <a class="hero-cta reveal d3" href="#proyectos" data-i18n="hero_cta">Ver mis proyectos <span>↓</span></a>
+  </div>
+  <div class="hero-photo reveal d1">
+    <!-- FOTO OPCIONAL: subí tu imagen como img/mica.jpg. Si no la subís, este bloque desaparece solo y el hero se ve igual de bien. -->
+    <img src="img/mica.jpg" alt="Micaela López" onerror="this.closest('.hero-photo').remove()">
+  </div>
+</header>
 
-    <div class="hero-imagen">
-      <!-- Reemplazá el placeholder con tu foto: <img src="tu-foto.jpg" alt="Micaela López"> -->
-      <div class="hero-imagen-placeholder">
-        <span>ML</span>
-        <p>foto aquí</p>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+      <span data-i18n="mq1">Comunicación institucional</span><i>✦</i><span data-i18n="mq2">Motion graphics</span><i>✦</i><span data-i18n="mq3">Diseño gráfico</span><i>✦</i><span data-i18n="mq4">Producción audiovisual</span><i>✦</i><span data-i18n="mq5">Datos &amp; dataviz</span><i>✦</i><span data-i18n="mq6">SEO &amp; copywriting</span><i>✦</i><span data-i18n="mq7">Desarrollo web</span><i>✦</i><span data-i18n="mq8">After Effects</span><i>✦</i><span data-i18n="mq9">Power BI</span><i>✦</i>
+      <span data-i18n="mq1">Comunicación institucional</span><i>✦</i><span data-i18n="mq2">Motion graphics</span><i>✦</i><span data-i18n="mq3">Diseño gráfico</span><i>✦</i><span data-i18n="mq4">Producción audiovisual</span><i>✦</i><span data-i18n="mq5">Datos &amp; dataviz</span><i>✦</i><span data-i18n="mq6">SEO &amp; copywriting</span><i>✦</i><span data-i18n="mq7">Desarrollo web</span><i>✦</i><span data-i18n="mq8">After Effects</span><i>✦</i><span data-i18n="mq9">Power BI</span><i>✦</i>
+  </div>
+</div>
+
+<section id="que-hago">
+  <div class="sec-head reveal">
+    <p class="sec-label" data-i18n="lbl1">01 — servicios</p>
+    <h2 data-i18n="h2_quehago">Qué <em>hago</em></h2>
+  </div>
+
+  <div class="services">
+    <div class="service reveal">
+      <span class="s-num">01</span>
+      <h3 class="s-title" data-i18n="s1_t">Comunicación <span class="amp">&amp;</span> contenido</h3>
+      <p class="s-desc" data-i18n="sdesc1">Comunicación institucional, estrategia de redes, redacción SEO y copywriting, y planificación de contenidos. Del plan de comunicación al posteo publicado.</p>
+      <div class="s-tools">
+        <span class="chip sm cv" title="Canva">Cv</span><span class="chip sm ps" title="Photoshop">Ps</span><span class="chip sm wp" title="WordPress">Wp</span><span class="chip sm xl" title="Excel">Xl</span>
       </div>
-      <span class="hero-tag">Palpalá · Jujuy</span>
+    </div>
+    <div class="service reveal">
+      <span class="s-num">02</span>
+      <h3 class="s-title" data-i18n="s2_t">Diseño <span class="amp">&amp;</span> motion</h3>
+      <p class="s-desc" data-i18n="sdesc2">Identidad visual, piezas gráficas para pantalla y redes, motion graphics y edición audiovisual. Diseño que se mueve y comunica.</p>
+      <div class="s-tools">
+        <span class="chip sm ai" title="Illustrator">Ai</span><span class="chip sm ae" title="After Effects">Ae</span><span class="chip sm pr" title="Premiere Pro">Pr</span><span class="chip sm fg" title="Figma">Fg</span>
+      </div>
+    </div>
+    <div class="service reveal">
+      <span class="s-num">03</span>
+      <h3 class="s-title" data-i18n="s3_t">Datos <span class="amp">&amp;</span> desarrollo</h3>
+      <p class="s-desc" data-i18n="sdesc3">Análisis y visualización de datos, tableros interactivos y desarrollo web. Los números también cuentan historias.</p>
+      <div class="s-tools">
+        <span class="chip sm pb" title="Power BI">Pb</span><span class="chip sm tb" title="Tableau">Tb</span><span class="chip sm web" title="HTML / CSS / JS">&lt;&gt;</span><span class="chip sm py" title="Python">Py</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tools-strip reveal">
+    <div class="tool"><span class="chip ps">Ps</span><div class="tool-info"><div class="tool-name">Photoshop</div><div class="tool-sub" data-i18n="t_ps">Edición y gráfica</div></div></div>
+    <div class="tool"><span class="chip ai">Ai</span><div class="tool-info"><div class="tool-name">Illustrator</div><div class="tool-sub" data-i18n="t_ai">Vector e identidad</div></div></div>
+    <div class="tool"><span class="chip ae">Ae</span><div class="tool-info"><div class="tool-name">After Effects</div><div class="tool-sub" data-i18n="t_ae">Motion graphics</div></div></div>
+    <div class="tool"><span class="chip pr">Pr</span><div class="tool-info"><div class="tool-name">Premiere Pro</div><div class="tool-sub" data-i18n="t_pr">Edición de video</div></div></div>
+    <div class="tool"><span class="chip fg">Fg</span><div class="tool-info"><div class="tool-name">Figma</div><div class="tool-sub" data-i18n="t_fg">Diseño UI</div></div></div>
+    <div class="tool"><span class="chip cv">Cv</span><div class="tool-info"><div class="tool-name">Canva</div><div class="tool-sub" data-i18n="t_cv">Contenido ágil</div></div></div>
+    <div class="tool"><span class="chip pb">Pb</span><div class="tool-info"><div class="tool-name">Power BI</div><div class="tool-sub" data-i18n="t_pb">Tableros de datos</div></div></div>
+    <div class="tool"><span class="chip tb">Tb</span><div class="tool-info"><div class="tool-name">Tableau</div><div class="tool-sub" data-i18n="t_tb">Visualización</div></div></div>
+    <div class="tool"><span class="chip xl">Xl</span><div class="tool-info"><div class="tool-name">Excel</div><div class="tool-sub" data-i18n="t_xl">Análisis y gestión</div></div></div>
+    <div class="tool"><span class="chip wp">Wp</span><div class="tool-info"><div class="tool-name">WordPress</div><div class="tool-sub" data-i18n="t_wp">Webs y CMS</div></div></div>
+    <div class="tool"><span class="chip my">My</span><div class="tool-info"><div class="tool-name">MySQL</div><div class="tool-sub" data-i18n="t_my">Bases de datos</div></div></div>
+    <div class="tool"><span class="chip web">&lt;&gt;</span><div class="tool-info"><div class="tool-name">HTML / CSS / JS</div><div class="tool-sub" data-i18n="t_web">Desarrollo web</div></div></div>
+    <div class="tool"><span class="chip py">Py</span><div class="tool-info"><div class="tool-name">Python</div><div class="tool-sub" data-i18n="t_py">Datos y automatización</div></div></div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="sec-head reveal">
+    <p class="sec-label" data-i18n="lbl2">02 — trabajo seleccionado</p>
+    <h2 data-i18n="h2_proy">Proyectos que me <em>representan</em></h2>
+  </div>
+
+  <div class="filters reveal" role="group" aria-label="Filtrar proyectos por categoría">
+    <button class="active" data-filter="todos" data-i18n="f_all">Todos</button>
+    <button data-filter="diseño" data-i18n="f_dis">Diseño</button>
+    <button data-filter="datos" data-i18n="f_dat">Datos</button>
+    <button data-filter="audiovisual">Audiovisual</button>
+    <button data-filter="dev">Dev</button>
+  </div>
+
+  <div class="projects">
+    <article class="project reveal" data-cat="diseño">
+          <span class="p-num">01</span>
+          <div class="p-media"><img src="img/ecojuy.jpg" alt="Vista del proyecto EcoJuy" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">EcoJuy</h3>
+          <p class="p-desc" data-i18n="pdesc1">Medio digital de periodismo ambiental para Jujuy. Branding completo, diseño de logo, identidad para redes y contenido periodístico. "Información y Conciencia Ambiental".</p>
+          <div class="p-tags"><span data-i18n="pl_dis">Diseño</span><span data-i18n="pl_bra">Branding</span><span data-i18n="pl_con">Contenido</span></div>
+          <a class="p-link" href="proyectos/ecojuy.html" aria-label="Ver proyecto EcoJuy" data-i18n="ver_p">Ver proyecto <span>→</span></a>
+        </article>
+
+    <article class="project reveal d2" data-cat="datos diseño">
+          <span class="p-num">02</span>
+          <div class="p-media"><img src="img/4autovias.jpg" alt="Vista del proyecto 4AUTOVÍAS" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">4AUTOVÍAS</h3>
+          <p class="p-desc" data-i18n="pdesc2">Proyecto de periodismo de datos sobre rutas nacionales argentinas, desarrollado en el FOCO Bootcamp (FTA + FOPEA). Diseño de visualizaciones y piezas gráficas del equipo.</p>
+          <div class="p-tags"><span data-i18n="pl_dat">Datos</span><span data-i18n="pl_dis">Diseño</span><span data-i18n="pl_per">Periodismo</span></div>
+          <a class="p-link" href="proyectos/4autovias.html" aria-label="Ver proyecto 4AUTOVÍAS" data-i18n="ver_p">Ver proyecto <span>→</span></a>
+        </article>
+
+    <article class="project reveal d3" data-cat="datos dev">
+          <span class="p-num">03</span>
+          <div class="p-media"><img src="img/salud-jujuy.jpg" alt="Vista del proyecto Salud pública en Jujuy" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">Salud pública en Jujuy</h3>
+          <p class="p-desc" data-i18n="pdesc3">Visualización interactiva de recursos de salud pública por departamento, desarrollada con Chart.js y JavaScript. De la base de datos cruda al gráfico navegable.</p>
+          <div class="p-tags"><span data-i18n="pl_dat">Datos</span><span data-i18n="pl_dev">Dev</span><span data-i18n="pl_dv">Dataviz</span></div>
+          <a class="p-link" href="proyectos/salud-jujuy.html" aria-label="Ver visualización de salud pública" data-i18n="ver_p">Ver proyecto <span>→</span></a>
+        </article>
+
+    <article class="project reveal" data-cat="audiovisual diseño">
+          <span class="p-num">04 · colección</span>
+          <div class="p-media"><img src="img/canal2.jpg" alt="Vista del proyecto Canal 2 — Fiberway" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">Canal 2 — Fiberway</h3>
+          <p class="p-desc" data-i18n="pdesc4">Mi trabajo actual en el canal: identidad de temporada, banner animado del Mundial 2026, gráfica en pantalla y comunicación institucional. Una colección en crecimiento.</p>
+          <div class="p-tags"><span data-i18n="pl_av">Audiovisual</span><span data-i18n="pl_mo">Motion</span><span data-i18n="pl_ins">Institucional</span></div>
+          <a class="p-link" href="proyectos/canal2.html" aria-label="Ver la colección de trabajos para Canal 2" data-i18n="ver_c">Ver colección <span>→</span></a>
+        </article>
+
+    <article class="project reveal d2" data-cat="audiovisual diseño">
+          <span class="p-num">05 · colección</span>
+          <div class="p-media"><img src="img/radio-vision.jpg" alt="Vista del trabajo para Radio Visión Jujuy" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">Radio Visión Jujuy</h3>
+          <p class="p-desc" data-i18n="pdesc5">Avatares y artística para las transmisiones de streaming del grupo de medios: Canal 7, AM 630, FM Trópico y Somos Jujuy. Identidad visual para el vivo.</p>
+          <div class="p-tags"><span data-i18n="pl_av">Audiovisual</span><span data-i18n="pl_dis">Diseño</span><span data-i18n="pl_str">Streaming</span></div>
+          <a class="p-link" href="proyectos/radio-vision.html" aria-label="Ver la colección de trabajos para Radio Visión Jujuy" data-i18n="ver_c">Ver colección <span>→</span></a>
+        </article>
+
+    <article class="project reveal d3" data-cat="diseño">
+          <span class="p-num">06</span>
+          <div class="p-media"><img src="img/casona-la-felipa.jpg" alt="Vista del proyecto Casona La Felipa" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">Casona La Felipa</h3>
+          <p class="p-desc" data-i18n="pdesc6">Plan de marketing digital para un emprendimiento gastronómico de Humahuaca, bajo la consultora estudiantil Criterio Digital. Estrategia, calendario de contenidos y diseño de piezas.</p>
+          <div class="p-tags"><span data-i18n="pl_dis">Diseño</span><span data-i18n="pl_est">Estrategia</span><span data-i18n="pl_red">Redes</span></div>
+          <a class="p-link" href="proyectos/casona-la-felipa.html" aria-label="Ver proyecto Casona La Felipa" data-i18n="ver_p">Ver proyecto <span>→</span></a>
+        </article>
+
+    <article class="project reveal" data-cat="datos">
+          <span class="p-num">07</span>
+          <div class="p-media"><img src="img/spotify-2024.jpg" alt="Vista del proyecto Limpieza de datos — Spotify 2024" loading="lazy" onerror="this.remove()"></div>
+          <h3 class="p-title">Limpieza de datos — Spotify 2024</h3>
+          <p class="p-desc" data-i18n="pdesc7">Proceso completo de limpieza y análisis de un dataset de Spotify: secuencia de depuración estructurada, normalización de campos y documentación del proceso.</p>
+          <div class="p-tags"><span data-i18n="pl_dat">Datos</span><span data-i18n="pl_ana">Análisis</span></div>
+          <a class="p-link" href="proyectos/spotify-2024.html" aria-label="Ver proyecto de limpieza de datos" data-i18n="ver_p">Ver proyecto <span>→</span></a>
+        </article>
+  </div>
+</section>
+
+<section id="sobre-mi">
+  <div class="sec-head reveal">
+    <p class="sec-label" data-i18n="lbl3">03 — quién soy</p>
+    <h2 data-i18n="h2_sobre">Sobre mí</h2>
+  </div>
+  <div class="reveal">
+  <div class="about-grid">
+    <div class="about-text">
+      <p data-i18n="about_p1">Soy comunicadora social en formación (FHyCS – UNJu), <strong>Analista Programadora Universitaria</strong> y técnica en informática. Trabajo en comunicación institucional y diseño en Canal 2 – Fiberway, y soy adscripta en la UNJu en los talleres de Producción Televisiva y de Producción del Texto Periodístico.</p>
+      <p class="quote" data-i18n="about_quote">"Me muevo entre tecnología y ciencias sociales porque creo que la comunicación <em>merece los dos</em>."</p>
+      <p data-i18n="about_p2">Vengo del ecosistema de medios de Jujuy: pasé por el grupo Radio Visión Jujuy (Canal 7, AM 630, FM Trópico y Somos Jujuy), por UNJu Radio 92.9 y por la comunicación estratégica en Communis. Esa doble formación es mi diferencial: puedo diseñar la pieza, producir el contenido y también <strong>analizar los datos</strong> que dicen si funcionó. Hoy curso la Diplomatura en Gestión de Datos y la Tecnicatura en Comunicación Digital Convergente, mientras desarrollo mi tesis de Licenciatura.</p>
+    </div>
+    <div class="stack">
+      <h3 data-i18n="st_dis">// diseño</h3>
+      <ul>
+        <li>Adobe Suite</li>
+        <li>Figma</li>
+        <li>Canva</li>
+        <li>Motion graphics</li>
+      </ul>
+      <h3 data-i18n="st_dat">// datos y dev</h3>
+      <ul>
+        <li>HTML / CSS / JS</li>
+        <li>MySQL</li>
+        <li>Power BI</li>
+        <li>Tableau</li>
+      </ul>
+      <h3 data-i18n="st_con">// contenido</h3>
+      <ul>
+        <li>SEO &amp; copywriting</li>
+        <li>WordPress</li>
+        <li data-i18n="st_redes">Gestión de redes</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="formacion">
+  <div class="sec-head reveal">
+    <p class="sec-label" data-i18n="lbl4">04 — trayectoria</p>
+    <h2 data-i18n="h2_form">Formación <span class="amp">&amp;</span> <em>certificaciones</em></h2>
+  </div>
+
+  <div class="form-group">
+    <h3 data-i18n="fg1">// formación académica</h3>
+    <div class="edu-rows">
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Licenciatura en Comunicación Social</div>
+        <div class="edu-sub">FHyCS – UNJu</div>
+        <span class="edu-anio" data-i18n="b1">2019 – En curso</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Diplomatura en Gestión de Datos</div>
+        <div class="edu-sub">Facultad de Ingeniería – UNJu</div>
+        <span class="edu-anio" data-i18n="b2">2026 – En curso</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Tecnicatura en Comunicación Digital Convergente</div>
+        <div class="edu-sub">FHyCS – UNJu</div>
+        <span class="edu-anio" data-i18n="b3">2025 – En curso</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Analista Programadora Universitaria</div>
+        <div class="edu-sub">Facultad de Ingeniería – UNJu</div>
+        <span class="edu-anio" data-i18n="b4">2017 – Finalizado</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Técnica en Informática</div>
+        <div class="edu-sub">Escuela de Minas Dr. Horacio Carrillo</div>
+        <span class="edu-anio" data-i18n="b5">2016 – Finalizado</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <h3 data-i18n="fg2">// formación complementaria</h3>
+    <div class="edu-rows">
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Redacción SEO y Copywriting</div>
+        <div class="edu-sub">Rúcula Digital Academy</div>
+        <span class="edu-anio">2026</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Diseño Digital, Comunicación Gráfica y Multimedia</div>
+        <div class="edu-sub">Universidad Nacional de Córdoba</div>
+        <span class="edu-anio">2025</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Asistente de Animación Gráfica</div>
+        <div class="edu-sub">Fundación Compromiso – Potrero Digital</div>
+        <span class="edu-anio">2024</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Diseño UX/UI</div>
+        <div class="edu-sub">Codo a Codo – GCBA</div>
+        <span class="edu-anio">2023</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Excel Avanzado y Power BI Inicial</div>
+        <div class="edu-sub">BA Multiplica – GCBA</div>
+        <span class="edu-anio">2022</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Argentina Programa</div>
+        <div class="edu-sub">Gobierno Nacional</div>
+        <span class="edu-anio">2018</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-titulo">Diseño Gráfico y Operador de PC Avanzado</div>
+        <div class="edu-sub">Municipalidad de Palpalá</div>
+        <span class="edu-anio">2016</span>
+        <!-- Para mostrar el botón, pegá la URL acá y borrá estas dos líneas de comentario:
+        <a class="badge-cert" href="URL_DEL_CERTIFICADO" target="_blank" rel="noopener">Ver certificado <span>→</span></a> -->
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SOBRE MÍ -->
-<section class="sobre" id="sobre">
-  <div class="sobre-inner">
-    <div class="sobre-col-titulo">
-      <p class="sobre-label">Sobre mí</p>
-      <h2 class="sobre-titulo">Entre tecnología y ciencias sociales...</h2>
-    </div>
-    <div class="sobre-col-texto">
-      <p class="sobre-texto">
-        Soy estudiante de comunicación social y analista programadora. Gracias a esto puedo combinar ambas y entender tanto el mensaje como la máquina que lo sostiene.
-      </p>
-      <p class="sobre-texto">
-        Trabajo en medios e instituciones desde hace años — diseñando, produciendo, editando, estrategizando. Y en algún punto de ese recorrido entendí algo: cuando una pieza cierra bien, cuando todo se alinea, siento una paz que no encuentro en ningún otro lugar.
-      </p>
-      <p class="sobre-texto">
-        Eso me dio criterio. Y el criterio me dio identidad.
-      </p>
-      <p class="sobre-texto sobre-texto--italic">
-        Diseño con identidad porque creo que la comunicación merece algo más que cumplir. Cada pieza que firmo lo demuestra. Y esta es mi manera de comunicar.
-      </p>
-      <div class="sobre-tags">
-        <span class="sobre-tag">Illustrator</span>
-        <span class="sobre-tag">Photoshop</span>
-        <span class="sobre-tag">Figma</span>
-        <span class="sobre-tag">Canva</span>
-        <span class="sobre-tag">Premiere Pro</span>
-        <span class="sobre-tag">After Effects</span>
-        <span class="sobre-tag">OBS Studio</span>
-        <span class="sobre-tag">HTML / CSS</span>
-        <span class="sobre-tag">WordPress</span>
-        <span class="sobre-tag">Power BI</span>
-        <span class="sobre-tag">Git / GitHub</span>
-        <span class="sobre-tag">Trello / Asana</span>
-      </div>
-    </div>
+<section id="contacto">
+  <div class="sec-head reveal">
+    <p class="sec-label" data-i18n="lbl5">05 — hablemos</p>
+    <h2 data-i18n="h2_contacto">¿Trabajamos <em>juntos</em>?</h2>
   </div>
-</section>
-
-<!-- TRAYECTORIA -->
-<section class="trayectoria">
-  <div class="trayectoria-inner">
-    <p class="section-label" style="margin-bottom: 3rem;">Trayectoria profesional</p>
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-fecha">Jun 2024 — Actualidad</div>
-        <div class="timeline-contenido">
-          <p class="timeline-rol">Comunicación Institucional · Diseño y Producción de Contenidos Digitales</p>
-          <p class="timeline-lugar">Canal 2 Jujuy – Fiberway</p>
-          <ul class="timeline-lista">
-            <li>Desarrollo de motion graphics, animaciones y piezas gráficas institucionales para TV, redes sociales y campañas (After Effects, Premiere Pro).</li>
-            <li>Producción y edición de contenido audiovisual para programas, coberturas especiales y eventos provinciales.</li>
-            <li>Articulación con equipos técnicos para garantizar coherencia visual e institucional.</li>
-            <li>Planificación de contenidos para múltiples plataformas con criterio editorial.</li>
-            <li>Gestión del flujo de trabajo del equipo de marketing mediante Trello.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-fecha">Jul 2024 — Ene 2025</div>
-        <div class="timeline-contenido">
-          <p class="timeline-rol">Comunicación Estratégica · Diseño y Gestión Digital</p>
-          <p class="timeline-lugar">Communis (Freelance)</p>
-          <ul class="timeline-lista">
-            <li>Planificación y creación de contenidos estratégicos para redes sociales de organizaciones e instituciones.</li>
-            <li>Desarrollo de estrategias de contenido, calendarios editoriales y campañas orientadas a resultados.</li>
-            <li>Redacción SEO con impacto en posicionamiento orgánico de marcas.</li>
-            <li>Análisis de métricas para la mejora continua de procesos y contenidos.</li>
-            <li>Asesoramiento sobre herramientas digitales y plataformas de gestión.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-fecha">Ene 2023 — Jun 2024</div>
-        <div class="timeline-contenido">
-          <p class="timeline-rol">Pasantía en Comunicación Audiovisual y Producción de Contenidos</p>
-          <p class="timeline-lugar">Radio Visión Jujuy · Canal 7 · AM630 · FM Trópico · Somos Jujuy</p>
-          <ul class="timeline-lista">
-            <li>Dirección artística y producción de piezas comunicacionales para múltiples medios del grupo.</li>
-            <li>Creación de material gráfico, brochures y banners para comunicación institucional.</li>
-            <li>Dirección técnica y artística de transmisiones en vivo (YouTube, Facebook Live, Twitch).</li>
-            <li>Gestión estratégica de redes sociales para múltiples medios.</li>
-            <li>Asistencia en diseño y maquetación web del portal Somos Jujuy.</li>
-            <li>Coordinación interáreas con Asana y HubSpot.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-fecha">Ene 2020 — Jun 2022</div>
-        <div class="timeline-contenido">
-          <p class="timeline-rol">Prácticas Profesionalizantes · Radiofonía y Producción de Contenidos</p>
-          <p class="timeline-lugar">UNJu Radio 92.9</p>
-          <ul class="timeline-lista">
-            <li>Co-conducción de programas radiales y asistencia en producción de segmentos temáticos.</li>
-            <li>Redacción y edición de notas para el portal web institucional.</li>
-            <li>Gestión de redes sociales y producción de materiales visuales institucionales.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-fecha">2025 — Actualidad</div>
-        <div class="timeline-contenido">
-          <p class="timeline-rol">Adscripción Docente</p>
-          <p class="timeline-lugar">UNJu – FHyCS</p>
-          <ul class="timeline-lista">
-            <li>Taller de Producción Televisiva y Taller de Comprensión y Producción del Texto Periodístico.</li>
-            <li>Planificación de actividades, desarrollo de materiales y seguimiento de estudiantes.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TRABAJOS -->
-<section class="trabajos" id="trabajos">
-  <div class="section-header">
-    <div>
-      <p class="section-label">Selección de trabajos</p>
-      <h2 class="section-titulo">Portfolio</h2>
-    </div>
-  </div>
-
-  <!-- FILTROS -->
-  <div class="categorias">
-    <button class="cat-btn activo" onclick="filtrar(this, 'todos')">Todos</button>
-    <button class="cat-btn" onclick="filtrar(this, 'canal2')">Canal 2 Fiberway</button>
-    <button class="cat-btn" onclick="filtrar(this, 'canal7')">Canal 7 Jujuy</button>
-    <button class="cat-btn" onclick="filtrar(this, 'motion')">Motion</button>
-    <button class="cat-btn" onclick="filtrar(this, 'video')">Video / Edición</button>
-    <button class="cat-btn" onclick="filtrar(this, 'formacion')">Trabajos de cursos</button>
-    <button class="cat-btn" onclick="filtrar(this, 'data')">Data / Visualización</button>
-    <button class="cat-btn" onclick="filtrar(this, 'web')">Web</button>
-  </div>
-
-  <!-- PROYECTOS -->
-  <div class="proyectos-grid" id="grid">
-
-    <a href="proyectos/canal2-ident-invierno.html" class="proyecto-card" data-cat="canal2" style="text-decoration:none">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Canal 2</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Identidad visual de invierno</h3>
-        <p class="proyecto-desc">Frame ident con efecto de tipografía integrada al paisaje jujeño. Animación en After Effects.</p>
-      </div>
-    </a>
-
-    <div class="proyecto-card" data-cat="canal2">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Canal 2</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Countdown FIFA World Cup 2026</h3>
-        <p class="proyecto-desc">Banner HTML responsivo para señal digital y web. Actualización en tiempo real.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="canal2">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Canal 2</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Cobertura Fiesta Nacional de los Estudiantes</h3>
-        <p class="proyecto-desc">Gráficos informativos en tiempo real para transmisión en vivo de evento provincial.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="canal7">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Canal 7</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Piezas institucionales Radio Visión</h3>
-        <p class="proyecto-desc">Branding, brochures y banners para AM630, FM Trópico y Canal 7.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="canal7">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Canal 7</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Transmisiones en vivo</h3>
-        <p class="proyecto-desc">Dirección artística y técnica de streamings para YouTube, Facebook Live y Twitch.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="data">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Data</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">EcoJuy — Información y Conciencia Ambiental</h3>
-        <p class="proyecto-desc">Portal de periodismo digital con identidad visual propia. TFI Licenciatura en Comunicación Social.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="web">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Web</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Criterio Digital — Casona La Felipa</h3>
-        <p class="proyecto-desc">Estrategia de marketing digital, calendar editorial y propuesta visual para emprendimiento gastronómico.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="web">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Web</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Portfolio personal</h3>
-        <p class="proyecto-desc">Diseño y desarrollo del sitio web propio. HTML, CSS, GitHub Pages. Paleta crema/bordeaux.</p>
-      </div>
-    </div>
-
-
-    <div class="proyecto-card" data-cat="motion">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Motion</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Motion graphics institucional</h3>
-        <p class="proyecto-desc">Animaciones y separadores para señal televisiva. After Effects.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="video">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Video / Edición</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Edición audiovisual</h3>
-        <p class="proyecto-desc">Edición de coberturas, programas y transmisiones. Premiere Pro.</p>
-      </div>
-    </div>
-
-    <div class="proyecto-card" data-cat="formacion">
-      <div class="proyecto-img">
-        <span class="proyecto-cat-badge">Cursos</span>
-        imagen
-      </div>
-      <div class="proyecto-info">
-        <h3 class="proyecto-titulo">Trabajos de formación</h3>
-        <p class="proyecto-desc">Proyectos realizados en UNC, Codo a Codo, Potrero Digital y otros.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="contacto" id="contacto">
-  <p class="contacto-label">¿Trabajamos juntos?</p>
-  <h2 class="contacto-titulo">El diseño que se recuerda<br>vive entre la forma y el mensaje.</h2>
-  <p class="contacto-bajada">Disponible para proyectos institucionales, diseño editorial, producción audiovisual y comunicación estratégica.</p>
-  <div class="contacto-links">
-    <a href="mailto:esmicalopez@gmail.com" class="contacto-link">esmicalopez@gmail.com</a>
-    <a href="https://linkedin.com/in/esmicalopez" target="_blank" class="contacto-link">LinkedIn</a>
-    <a href="#" class="contacto-link">+5493884857331</a>
+  <p class="contact-intro reveal" data-i18n="c_intro">Si tenés un proyecto de comunicación, diseño o datos dando vueltas, escribime.</p>
+  <div class="contact-links reveal d1">
+    <a class="btn pri" href="mailto:esmicalopez@gmail.com">Email <span>→</span></a>
+    <a class="btn" href="https://www.linkedin.com/in/esmicalopez" target="_blank" rel="noopener">LinkedIn <span>→</span></a>
+    <a class="btn" href="https://www.behance.net/micaelalopez9" target="_blank" rel="noopener">Behance <span>→</span></a>
+    <a class="btn" href="https://github.com/esmicalopez" target="_blank" rel="noopener">GitHub <span>→</span></a>
   </div>
 </section>
 
 <footer>
-  © 2025 Micaela López · Palpalá, Jujuy, Argentina
+  <span>© <span id="anio"></span> Micaela López <span class="dot">·</span> Jujuy, Argentina</span>
+  <span data-i18n="footer_made">hecha en Argentina <span class="dot">·</span> html / css / js</span>
 </footer>
 
+<script src="assets/js/anim.js"></script>
 <script>
-function filtrar(btn, cat) {
-  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('activo'));
-  btn.classList.add('activo');
-  document.querySelectorAll('.proyecto-card').forEach(card => {
-    if (cat === 'todos' || card.dataset.cat === cat) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+  // ---------- Idioma ES/EN ----------
+  const I18N = {
+    nav_quehago:["Qué hago","What I do"], nav_proyectos:["Proyectos","Projects"],
+    nav_sobremi:["Sobre mí","About me"], nav_formacion:["Formación","Education"],
+    nav_exp:["Experiencia","Experience"],
+    nav_contacto:["Contacto","Contact"],
+    hero_h1:["Diseño, produzco<br>y <em>comunico</em>.<br>Todo en el mismo lugar.","I design, produce<br>and <em>communicate</em>.<br>All in one place."],
+    mq1:["Comunicación institucional","Institutional communication"], mq2:["Motion graphics","Motion graphics"],
+    mq3:["Diseño gráfico","Graphic design"], mq4:["Producción audiovisual","Audiovisual production"],
+    mq5:["Datos & dataviz","Data & dataviz"], mq6:["SEO & copywriting","SEO & copywriting"],
+    mq7:["Desarrollo web","Web development"], mq8:["After Effects","After Effects"], mq9:["Power BI","Power BI"],
+    hero_desc:["Trabajo en <strong>comunicación institucional, producción audiovisual y motion graphics</strong> desde Jujuy, Argentina — y me muevo con la misma comodidad entre una pieza gráfica y una base de datos.","I work in <strong>institutional communication, audiovisual production and motion graphics</strong> from Jujuy, Argentina — and I'm just as comfortable with a graphic piece as with a database."],
+    hero_cta:["Ver mis proyectos <span>↓</span>","See my projects <span>↓</span>"],
+    lbl1:["01 — servicios","01 — services"], lbl2:["02 — trabajo seleccionado","02 — selected work"],
+    lbl3:["03 — quién soy","03 — who I am"], lbl4:["04 — trayectoria","04 — background"],
+    lbl5:["05 — hablemos","05 — let's talk"],
+    h2_quehago:["Qué <em>hago</em>","What I <em>do</em>"],
+    h2_proy:["Proyectos que me <em>representan</em>","Projects that <em>represent me</em>"],
+    h2_sobre:["Sobre mí","About me"],
+    h2_form:["Formación <span class=\"amp\">&amp;</span> <em>certificaciones</em>","Education <span class=\"amp\">&amp;</span> <em>certifications</em>"],
+    h2_contacto:["¿Trabajamos <em>juntos</em>?","Shall we work <em>together</em>?"],
+    s1_t:["Comunicación <span class=\"amp\">&amp;</span> contenido","Communication <span class=\"amp\">&amp;</span> content"],
+    s2_t:["Diseño <span class=\"amp\">&amp;</span> motion","Design <span class=\"amp\">&amp;</span> motion"],
+    s3_t:["Datos <span class=\"amp\">&amp;</span> desarrollo","Data <span class=\"amp\">&amp;</span> development"],
+    sdesc1:["Comunicación institucional, estrategia de redes, redacción SEO y copywriting, y planificación de contenidos. Del plan de comunicación al posteo publicado.","Institutional communication, social media strategy, SEO writing and copywriting, and content planning. From the communication plan to the published post."],
+    sdesc2:["Identidad visual, piezas gráficas para pantalla y redes, motion graphics y edición audiovisual. Diseño que se mueve y comunica.","Visual identity, graphics for screen and social media, motion graphics and video editing. Design that moves and communicates."],
+    sdesc3:["Análisis y visualización de datos, tableros interactivos y desarrollo web. Los números también cuentan historias.","Data analysis and visualization, interactive dashboards and web development. Numbers tell stories too."],
+    t_ps:["Edición y gráfica","Editing & graphics"], t_ai:["Vector e identidad","Vector & identity"],
+    t_ae:["Motion graphics","Motion graphics"], t_pr:["Edición de video","Video editing"],
+    t_fg:["Diseño UI","UI design"], t_cv:["Contenido ágil","Fast content"],
+    t_pb:["Tableros de datos","Data dashboards"], t_tb:["Visualización","Visualization"],
+    t_xl:["Análisis y gestión","Analysis & management"], t_wp:["Webs y CMS","Websites & CMS"],
+    t_my:["Bases de datos","Databases"], t_web:["Desarrollo web","Web development"],
+    t_py:["Datos y automatización","Data & automation"],
+    f_all:["Todos","All"], f_dis:["Diseño","Design"], f_dat:["Datos","Data"],
+    pdesc1:["Medio digital de periodismo ambiental para Jujuy. Branding completo, diseño de logo, identidad para redes y contenido periodístico. \"Información y Conciencia Ambiental\".","Digital environmental journalism outlet for Jujuy. Full branding, logo design, social media identity and journalistic content. \"Information and Environmental Awareness\"."],
+    pdesc2:["Proyecto de periodismo de datos sobre rutas nacionales argentinas, desarrollado en el FOCO Bootcamp (FTA + FOPEA). Diseño de visualizaciones y piezas gráficas del equipo.","Data journalism project on Argentina's national highways, developed at FOCO Bootcamp (FTA + FOPEA). Design of the team's visualizations and graphics."],
+    pdesc3:["Visualización interactiva de recursos de salud pública por departamento, desarrollada con Chart.js y JavaScript. De la base de datos cruda al gráfico navegable.","Interactive visualization of public health resources by department, built with Chart.js and JavaScript. From raw database to navigable chart."],
+    pdesc4:["Mi trabajo actual en el canal: identidad de temporada, banner animado del Mundial 2026, gráfica en pantalla y comunicación institucional. Una colección en crecimiento.","My current work at the channel: seasonal identity, animated 2026 World Cup banner, on-screen graphics and institutional communication. A growing collection."],
+    pdesc5:["Avatares y artística para las transmisiones de streaming del grupo de medios: Canal 7, AM 630, FM Trópico y Somos Jujuy. Identidad visual para el vivo.","Avatars and broadcast art for the media group's streaming: Canal 7, AM 630, FM Trópico and Somos Jujuy. Visual identity for live shows."],
+    pdesc6:["Plan de marketing digital para un emprendimiento gastronómico de Humahuaca, bajo la consultora estudiantil Criterio Digital. Estrategia, calendario de contenidos y diseño de piezas.","Digital marketing plan for a food business in Humahuaca, under the student consultancy Criterio Digital. Strategy, content calendar and graphic design."],
+    pdesc7:["Proceso completo de limpieza y análisis de un dataset de Spotify: secuencia de depuración estructurada, normalización de campos y documentación del proceso.","Complete cleaning and analysis of a Spotify dataset: structured cleaning sequence, field normalization and process documentation."],
+    ver_p:["Ver proyecto <span>→</span>","View project <span>→</span>"],
+    ver_c:["Ver colección <span>→</span>","View collection <span>→</span>"],
+    pl_dis:["Diseño","Design"], pl_bra:["Branding","Branding"], pl_con:["Contenido","Content"],
+    pl_dat:["Datos","Data"], pl_per:["Periodismo","Journalism"], pl_dev:["Dev","Dev"],
+    pl_dv:["Dataviz","Dataviz"], pl_av:["Audiovisual","Audiovisual"], pl_mo:["Motion","Motion"],
+    pl_ins:["Institucional","Institutional"], pl_est:["Estrategia","Strategy"], pl_red:["Redes","Social media"],
+    pl_str:["Streaming","Streaming"], pl_ana:["Análisis","Analysis"],
+    about_p1:["Soy comunicadora social en formación (FHyCS – UNJu), <strong>Analista Programadora Universitaria</strong> y técnica en informática. Trabajo en comunicación institucional y diseño en Canal 2 – Fiberway, y soy adscripta en la UNJu en los talleres de Producción Televisiva y de Producción del Texto Periodístico.","I'm a social communication student (FHyCS – UNJu), a <strong>University Programmer Analyst</strong> and an IT technician. I work in institutional communication and design at Canal 2 – Fiberway, and I'm a teaching assistant at UNJu in the TV Production and Journalistic Writing workshops."],
+    about_quote:["\"Me muevo entre tecnología y ciencias sociales porque creo que la comunicación <em>merece los dos</em>.\"","\"I move between technology and social sciences because I believe communication <em>deserves both</em>.\""],
+    about_p2:["Vengo del ecosistema de medios de Jujuy: pasé por el grupo Radio Visión Jujuy (Canal 7, AM 630, FM Trópico y Somos Jujuy), por UNJu Radio 92.9 y por la comunicación estratégica en Communis. Esa doble formación es mi diferencial: puedo diseñar la pieza, producir el contenido y también <strong>analizar los datos</strong> que dicen si funcionó. Hoy curso la Diplomatura en Gestión de Datos y la Tecnicatura en Comunicación Digital Convergente, mientras desarrollo mi tesis de Licenciatura.","I come from Jujuy's media ecosystem: the Radio Visión Jujuy group (Canal 7, AM 630, FM Trópico and Somos Jujuy), UNJu Radio 92.9 and strategic communication at Communis. That dual background is my edge: I can design the piece, produce the content and also <strong>analyze the data</strong> that says whether it worked. I'm currently taking a Diploma in Data Management and a Technical Degree in Convergent Digital Communication while developing my Licenciatura thesis."],
+    st_dis:["// diseño","// design"], st_dat:["// datos y dev","// data & dev"], st_con:["// contenido","// content"],
+    st_redes:["Gestión de redes","Social media management"],
+    fg1:["// formación académica","// academic background"],
+    fg2:["// formación complementaria","// courses & certifications"],
+    b1:["2019 – En curso","2019 – Ongoing"], b2:["2026 – En curso","2026 – Ongoing"],
+    b3:["2025 – En curso","2025 – Ongoing"], b4:["2017 – Finalizado","2017 – Completed"],
+    b5:["2016 – Finalizado","2016 – Completed"],
+    c_intro:["Si tenés un proyecto de comunicación, diseño o datos dando vueltas, escribime.","If you have a communication, design or data project in mind, write to me."],
+    footer_made:["hecha en Argentina <span class=\"dot\">·</span> html / css / js","made in Argentina <span class=\"dot\">·</span> html / css / js"]
+  };
+  const TITULOS = ["Micaela López — Comunicación, diseño y datos","Micaela López — Communication, design & data"];
+  const FRASES = ["// hola, soy Micaela López — Jujuy, Argentina","// hi, I'm Micaela López — Jujuy, Argentina"];
+
+  let idioma = localStorage.getItem("idioma") === "en" ? 1 : 0;
+  const langBtn = document.getElementById("lang-toggle");
+
+  function aplicarIdioma() {
+    document.documentElement.lang = idioma === 1 ? "en" : "es";
+    document.title = TITULOS[idioma];
+    langBtn.textContent = idioma === 1 ? "ES" : "EN";
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const clave = el.dataset.i18n;
+      if (I18N[clave]) el.innerHTML = I18N[clave][idioma];
+    });
+    tipear();
+  }
+
+  langBtn.addEventListener("click", () => {
+    idioma = idioma === 0 ? 1 : 0;
+    localStorage.setItem("idioma", idioma === 1 ? "en" : "es");
+    aplicarIdioma();
   });
-}
+
+  // ---------- Tipeo de la línea chica del hero (según idioma) ----------
+  const typed = document.getElementById("typed");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let tipeoTimer;
+  function tipear() {
+    clearTimeout(tipeoTimer);
+    const frase = FRASES[idioma];
+    if (reduceMotion) { typed.textContent = frase; return; }
+    let i = 0;
+    (function escribir() {
+      if (i <= frase.length) {
+        typed.textContent = frase.slice(0, i);
+        i++;
+        tipeoTimer = setTimeout(escribir, 42);
+      }
+    })();
+  }
+
+  // ---------- Filtros de proyectos ----------
+  const botones = document.querySelectorAll(".filters button");
+  const proyectos = document.querySelectorAll(".project");
+  botones.forEach(btn => {
+    btn.addEventListener("click", () => {
+      botones.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filtro = btn.dataset.filter;
+      proyectos.forEach(p => {
+        const cats = p.dataset.cat.split(" ");
+        p.classList.toggle("hidden", filtro !== "todos" && !cats.includes(filtro));
+      });
+    });
+  });
+
+  // ---------- Año dinámico + idioma inicial ----------
+  document.getElementById("anio").textContent = new Date().getFullYear();
+  aplicarIdioma();
 </script>
 
 </body>

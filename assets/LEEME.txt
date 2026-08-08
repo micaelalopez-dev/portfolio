@@ -1,0 +1,17 @@
+CARPETA ASSETS — recursos genéricos del sitio
+=============================================
+
+css/
+  base.css      → Variables de color y tipografía (:root), nav, footer,
+                  chips, botones y componentes compartidos.
+                  *** Para cambiar un color en TODO el sitio, editá :root acá. ***
+  index.css     → Estilos exclusivos de la página principal.
+  proyecto.css  → Estilos de las páginas de proyectos, colecciones y piezas.
+
+img/
+  Para recursos genéricos del sitio (favicon, imagen para compartir
+  en redes, logos propios). Las imágenes de tus PROYECTOS van en la
+  carpeta img/ de la raíz, no acá.
+
+Rutas: el index enlaza "assets/css/..." y las páginas de proyectos
+"../assets/css/..." — si movés carpetas, ajustá esas rutas.
