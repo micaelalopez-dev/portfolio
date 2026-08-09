@@ -3,12 +3,17 @@
    Editá los colores del sitio en :root.
    ============================================ */
 :root{
-  --bg:#FAFAF8;
-  --surface:#FFFFFF;
-  --text:#171614;
-  --text-2:#7A756D;
-  --line:#E8E5DF;
-  --accent:#E8552F;
+  --bg:#15111F;
+  --surface:#1E1930;
+  --text:#F2EEF7;
+  --text-2:#B3A9C4;
+  --line:rgba(242,238,247,.12);
+  --accent:#9166BE;
+  --accent-2:#E8639E;
+  --accent-3:#57C7B0;
+  --accent-grad:linear-gradient(100deg,var(--accent),#D3B9EE 60%,var(--accent-2));
+  --btn-grad:linear-gradient(180deg,var(--accent),#D3B9EE);
+  --btn-ink:#1B1330;
   --maxw:1200px;
   --font-display:'Playfair Display',serif;   /* títulos */
   --font-body:'Poppins',system-ui,sans-serif; /* cuerpo */
@@ -33,8 +38,8 @@ em{font-style:italic;color:var(--accent)}
 /* ---------- NAV (fija, se esconde al bajar) ---------- */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:50;
-  background:rgba(250,250,248,.86);
-  backdrop-filter:blur(12px);
+  background:rgba(21,17,31,.75);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
   transition:transform .45s var(--ease);
 }
@@ -103,7 +108,10 @@ nav.nav-oculta{transform:translateY(-100%)}
   font-family:var(--font-display);font-size:21px;font-weight:500;
   color:var(--text-2);white-space:nowrap;
 }
-.marquee-track i{font-style:normal;color:var(--accent);font-size:13px}
+.marquee-track i{font-style:normal;font-size:13px}
+.marquee-track i:nth-of-type(3n+1){color:var(--accent)}
+.marquee-track i:nth-of-type(3n+2){color:var(--accent-2)}
+.marquee-track i:nth-of-type(3n+3){color:var(--accent-3)}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ---------- CURSOR DE TIPEO ---------- */
@@ -124,8 +132,11 @@ nav.nav-oculta{transform:translateY(-100%)}
   transition:all .3s var(--ease);
 }
 .btn:hover{border-color:var(--text);transform:translateY(-2px)}
-.btn.pri{background:var(--text);color:var(--bg);border-color:var(--text)}
-.btn.pri:hover{background:var(--accent);border-color:var(--accent)}
+.btn.pri{
+  background:var(--btn-grad);color:var(--btn-ink);border-color:transparent;
+  box-shadow:0 14px 30px -14px rgba(145,102,190,.65);
+}
+.btn.pri:hover{filter:brightness(1.06);transform:translateY(-2px)}
 
 /* ---------- FOOTER ---------- */
 footer{

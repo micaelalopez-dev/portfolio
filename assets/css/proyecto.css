@@ -35,7 +35,7 @@ h1{
 /* ---------- CONTENIDO ---------- */
 main{max-width:var(--maxw);margin:0 auto;padding:40px 28px 100px}
 .media{
-  aspect-ratio:16/9;border-radius:10px;background:#EFEDE8;
+  aspect-ratio:16/9;border-radius:10px;background:var(--surface);border:1px solid var(--line);
   overflow:hidden;position:relative;margin-bottom:64px;
 }
 .media::after{

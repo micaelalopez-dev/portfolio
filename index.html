@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Micaela López — Comunicación, diseño y datos</title>
 <meta name="description" content="Portfolio de Micaela López. Diseño, produzco y comunico. Todo en el mismo lugar. Jujuy, Argentina.">
+<meta name="theme-color" content="#15111F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital@1&family=Poppins:wght@300;400;500;600&family=Montserrat+Alternates:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,14 +36,13 @@
 <header>
   <div class="hero-main">
     <p class="hero-line"><span id="typed"></span><span class="cursor" aria-hidden="true"></span></p>
-    <p class="hero-name reveal">Micaela López</p>
-    <h1 class="reveal d1" data-i18n="hero_h1">Diseño, produzco y <em>comunico</em>. Todo en el mismo lugar.</h1>
+    <h1 class="reveal d1" data-i18n="hero_h1">Hola, soy Micaela — me gusta <span class="grad">diseñar, producir y comunicar</span>.</h1>
     <p class="hero-desc reveal d2" data-i18n="hero_desc">Trabajo en <strong>comunicación institucional, producción audiovisual y motion graphics</strong> desde Jujuy, Argentina — y me muevo con la misma comodidad entre una pieza gráfica y una base de datos.</p>
-    <a class="hero-cta reveal d3" href="#proyectos" data-i18n="hero_cta">Ver mis proyectos <span>↓</span></a>
+    <a class="hero-cta reveal d3" href="#proyectos" data-i18n="hero_cta">Ver proyectos <span>→</span></a>
   </div>
-  <div class="hero-photo reveal d1">
-    <!-- FOTO OPCIONAL: subí tu imagen como img/mica.jpg. Si no la subís, este bloque desaparece solo y el hero se ve igual de bien. -->
-    <img src="img/mica.jpg" alt="Micaela López" onerror="this.closest('.hero-photo').remove()">
+  <div class="hero-sticker reveal d1">
+    <!-- STICKER OPCIONAL: subí tu imagen como img/mica-sticker.png (PNG con fondo transparente). Si no la subís, este bloque desaparece solo y el hero se ve igual de bien. -->
+    <img src="img/mica-sticker.png" alt="" onerror="this.closest('.hero-sticker').remove()">
   </div>
 </header>
 
@@ -351,13 +351,13 @@
     nav_sobremi:["Sobre mí","About me"], nav_formacion:["Formación","Education"],
     nav_exp:["Experiencia","Experience"],
     nav_contacto:["Contacto","Contact"],
-    hero_h1:["Diseño, produzco<br>y <em>comunico</em>.<br>Todo en el mismo lugar.","I design, produce<br>and <em>communicate</em>.<br>All in one place."],
+    hero_h1:["Hola, soy Micaela — me gusta <span class=\"grad\">diseñar, producir y comunicar</span>.","Hi, I'm Micaela — I love to <span class=\"grad\">design, produce and communicate</span>."],
     mq1:["Comunicación institucional","Institutional communication"], mq2:["Motion graphics","Motion graphics"],
     mq3:["Diseño gráfico","Graphic design"], mq4:["Producción audiovisual","Audiovisual production"],
     mq5:["Datos & dataviz","Data & dataviz"], mq6:["SEO & copywriting","SEO & copywriting"],
     mq7:["Desarrollo web","Web development"], mq8:["After Effects","After Effects"], mq9:["Power BI","Power BI"],
     hero_desc:["Trabajo en <strong>comunicación institucional, producción audiovisual y motion graphics</strong> desde Jujuy, Argentina — y me muevo con la misma comodidad entre una pieza gráfica y una base de datos.","I work in <strong>institutional communication, audiovisual production and motion graphics</strong> from Jujuy, Argentina — and I'm just as comfortable with a graphic piece as with a database."],
-    hero_cta:["Ver mis proyectos <span>↓</span>","See my projects <span>↓</span>"],
+    hero_cta:["Ver proyectos <span>→</span>","See my projects <span>→</span>"],
     lbl1:["01 — servicios","01 — services"], lbl2:["02 — trabajo seleccionado","02 — selected work"],
     lbl3:["03 — quién soy","03 — who I am"], lbl4:["04 — trayectoria","04 — background"],
     lbl5:["05 — hablemos","05 — let's talk"],
@@ -408,7 +408,7 @@
     footer_made:["hecha en Argentina <span class=\"dot\">·</span> html / css / js","made in Argentina <span class=\"dot\">·</span> html / css / js"]
   };
   const TITULOS = ["Micaela López — Comunicación, diseño y datos","Micaela López — Communication, design & data"];
-  const FRASES = ["// hola, soy Micaela López — Jujuy, Argentina","// hi, I'm Micaela López — Jujuy, Argentina"];
+  const FRASES = ["// portfolio 2026 — Jujuy, Argentina","// portfolio 2026 — Jujuy, Argentina"];
 
   let idioma = localStorage.getItem("idioma") === "en" ? 1 : 0;
   const langBtn = document.getElementById("lang-toggle");
