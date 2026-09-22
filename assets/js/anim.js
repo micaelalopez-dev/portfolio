@@ -102,10 +102,20 @@
     ctx.globalAlpha = 1;
   }
 
+  // ---------- Reacción al scroll: las partículas se aceleran al scrollear ----------
+  let ultimoScrollY = window.scrollY;
+  let velScroll = 0;
+  window.addEventListener("scroll", () => {
+    const actualY = window.scrollY;
+    velScroll = Math.abs(actualY - ultimoScrollY) * 0.08;
+    ultimoScrollY = actualY;
+  }, { passive: true });
+
   function mover() {
+    velScroll *= 0.94; // amortigua hasta volver al reposo
     particulas.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
+      p.x += p.vx + (p.vx > 0 ? velScroll : -velScroll) * 0.4;
+      p.y += p.vy - velScroll * 0.5;
       if (p.x < -10) p.x = ancho + 10; else if (p.x > ancho + 10) p.x = -10;
       if (p.y < -10) p.y = alto + 10; else if (p.y > alto + 10) p.y = -10;
     });
