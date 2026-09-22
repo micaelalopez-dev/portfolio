@@ -157,4 +157,5 @@ footer .dot{color:var(--accent)}
   .marquee-track{animation:none}
   .cursor{animation:none}
   nav,.btn{transition:none}
+  header::before{animation:none}
 }
