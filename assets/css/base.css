@@ -15,7 +15,7 @@
   --btn-grad:linear-gradient(180deg,var(--accent),#D3B9EE);
   --btn-ink:#1B1330;
   --maxw:1200px;
-  --font-display:'Playfair Display',serif;   /* títulos */
+  --font-display:"quiche-sans",sans-serif;   /* títulos (Adobe Fonts) */
   --font-body:'Poppins',system-ui,sans-serif; /* cuerpo */
   --font-ui:'Montserrat Alternates',sans-serif; /* etiquetas, botones, detalles */
   --ease:cubic-bezier(.22,.61,.36,1);
