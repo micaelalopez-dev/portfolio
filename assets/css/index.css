@@ -18,7 +18,7 @@
 /* ---------- HERO (frase protagonista + sticker opcional) ---------- */
 header{
   max-width:var(--maxw);margin:0 auto;position:relative;
-  min-height:calc(92vh - 68px);
+  min-height:calc(80vh - 68px);
   display:grid;grid-template-columns:1fr auto;gap:56px;
   align-items:center;
   padding:60px 28px;
@@ -42,27 +42,21 @@ header::before{
   50% {background-position:22% 10%, 86% 90%,   54% 46%;}
   100%{background-position:6% -6%,  96% 108%,  72% 26%;}
 }
-.hero-main{max-width:720px;position:relative;z-index:1}
+.hero-main{max-width:680px;position:relative;z-index:1}
 .hero-line{
   display:inline-flex;align-items:center;
   font-family:var(--font-ui);
   font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:26px;min-height:1.6em;
+  color:var(--accent);margin-bottom:26px;
   padding:6px 14px;border:1px solid rgba(145,102,190,.35);border-radius:999px;
   background:rgba(145,102,190,.1);
 }
 h1{
-  font-family:var(--font-display);
-  font-weight:500;
-  font-size:clamp(38px,5.2vw,70px);
-  line-height:1.1;letter-spacing:-.01em;
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(36px,5vw,64px);line-height:1.12;letter-spacing:-.01em;
 }
-h1 .grad{
-  background:var(--accent-grad);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  font-style:italic;
-}
-.hero-desc{max-width:480px;font-size:15.5px;color:var(--text-2);margin-top:32px}
+.hero-tagline{display:block;font-weight:500;color:var(--text);margin-top:4px}
+.hero-desc{max-width:480px;font-size:15.5px;color:var(--text-2);margin-top:28px}
 .hero-desc strong{color:var(--text);font-weight:600}
 .hero-cta{
   display:inline-flex;align-items:center;gap:9px;
@@ -72,8 +66,10 @@ h1 .grad{
   transition:gap .25s,transform .25s;
 }
 .hero-cta:hover{gap:14px;transform:translateY(-2px)}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px}
+.hero-ctas .hero-cta{margin-top:0}
 .hero-sticker{
-  width:230px;aspect-ratio:4/5;flex:none;position:relative;z-index:1;
+  width:220px;aspect-ratio:4/5;flex:none;position:relative;z-index:1;
   transform:rotate(-6deg);border-radius:20px;overflow:hidden;
   border:1px solid var(--line);
   box-shadow:0 20px 44px -18px rgba(0,0,0,.6);
@@ -81,46 +77,35 @@ h1 .grad{
 .hero-sticker img{
   width:100%;height:100%;object-fit:cover;display:block;
 }
-.scroll-hint{
-  font-family:var(--font-ui);
-  font-size:12px;color:var(--text-2);
-  display:inline-flex;align-items:center;gap:8px;
-}
-.scroll-hint span{display:inline-block;animation:bajar 1.6s var(--ease) infinite}
-@keyframes bajar{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
 /* ---------- SECCIONES ---------- */
-section{max-width:var(--maxw);margin:0 auto;padding:110px 28px}
-.sec-head{margin-bottom:64px}
-.sec-label{
-  font-family:var(--font-ui);
-  font-size:12px;color:var(--accent);margin-bottom:14px;
-}
+section{max-width:var(--maxw);margin:0 auto;padding:100px 28px}
+.sec-head{margin-bottom:56px}
+.sec-label{font-family:var(--font-ui);font-size:12px;color:var(--accent);margin-bottom:14px}
 h2{
   font-family:var(--font-display);font-weight:500;
-  font-size:clamp(34px,5vw,62px);line-height:1.1;letter-spacing:-.01em;
+  font-size:clamp(30px,4.4vw,52px);line-height:1.1;letter-spacing:-.01em;
 }
 
-/* ---------- QUÉ HAGO (filas numeradas) ---------- */
-.services{border-top:1px solid var(--line);margin-bottom:80px}
+/* ---------- QUÉ HAGO ---------- */
+.services{border-top:1px solid var(--line);margin-bottom:70px}
 .service{
-  display:grid;grid-template-columns:70px 1.1fr 1.4fr auto;
+  display:grid;grid-template-columns:70px 1.1fr 1.4fr;
   gap:18px 36px;align-items:start;
-  padding:42px 0;border-bottom:1px solid var(--line);
+  padding:38px 0;border-bottom:1px solid var(--line);
 }
 .s-num{font-family:var(--font-ui);font-size:13px;color:var(--accent);padding-top:8px}
-.s-title{font-family:var(--font-display);font-weight:500;font-size:27px;line-height:1.2}
+.s-title{font-family:var(--font-display);font-weight:500;font-size:25px;line-height:1.2}
 .s-desc{font-size:15px;color:var(--text-2)}
-.s-tools{display:flex;gap:8px;padding-top:4px}
+.tools-title{margin-bottom:22px}
 
-/* ---------- CHIPS DE HERRAMIENTAS ---------- */
+/* ---------- HERRAMIENTAS (chip de color para las que no tienen logo real) ---------- */
 .chip{
   display:inline-flex;align-items:center;justify-content:center;
-  width:44px;height:44px;border-radius:11px;
-  font-family:var(--font-body);font-weight:600;font-size:15px;
+  width:28px;height:28px;border-radius:8px;flex:none;
+  font-family:var(--font-body);font-weight:600;font-size:11px;
   user-select:none;
 }
-.chip.sm{width:32px;height:32px;font-size:11.5px;border-radius:8px}
 .chip.ps{background:#001E36;color:#31A8FF}
 .chip.ai{background:#330000;color:#FF9A00}
 .chip.ae{background:#00005B;color:#9999FF}
@@ -135,24 +120,18 @@ h2{
 .chip.web{background:#E44D26;color:#FFFFFF}
 .chip.wp{background:#21759B;color:#FFFFFF}
 .chip.py{background:#3776AB;color:#FFD43B}
-.tool-logo{width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex:none}
+.tool-logo{width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex:none}
 .tool-logo img{width:100%;height:100%;object-fit:contain;display:block}
 
-/* ---------- FRANJA DE HERRAMIENTAS ---------- */
-.tools-strip{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));
-}
+/* ---------- FRANJA DE HERRAMIENTAS (píldoras, igual que portfolio-cm) ---------- */
+.tools-strip{display:flex;flex-wrap:wrap;gap:12px}
 .tool{
-  display:flex;align-items:center;gap:13px;
-  padding:20px 18px;
-  border:1px solid var(--line);
-  margin:-1px 0 0 -1px;   /* colapsa los bordes en una sola línea fina */
-  transition:background .3s;
+  display:flex;align-items:center;gap:12px;
+  padding:8px 18px 8px 8px;border:1px solid var(--line);border-radius:999px;
 }
-.tool:hover{background:var(--surface)}
-.tool-info{line-height:1.35}
-.tool-name{font-weight:600;font-size:14px}
-.tool-sub{font-size:12.5px;color:var(--text-2)}
+.tool-name{font-weight:600;font-size:13.5px}
+
+#que-hago + section{padding-top:0}
 
 /* ---------- PROYECTOS ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:26px;margin-bottom:56px}
@@ -166,29 +145,26 @@ h2{
 .filters button:hover{color:var(--text)}
 .filters button.active{color:var(--text);border-bottom-color:var(--accent);border-bottom-width:2px}
 .projects{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
-  gap:64px 44px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  gap:56px 40px;
 }
 .project{display:flex;flex-direction:column}
 .project.hidden{display:none}
 .p-media{
-  aspect-ratio:4/3;border-radius:10px;overflow:hidden;
+  display:none;aspect-ratio:4/3;border-radius:10px;overflow:hidden;
   background:var(--surface);border:1px solid var(--line);position:relative;margin-bottom:20px;
 }
-.p-media::after{
-  content:'// imagen pendiente';
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-ui);font-size:12px;color:var(--text-2);
-}
+.p-media.ok{display:block}
 .p-media img{
   position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;
   transition:transform .8s var(--ease);
 }
 .project:hover .p-media img{transform:scale(1.05)}
 .p-num{font-family:var(--font-ui);font-size:11.5px;color:var(--text-2)}
-.p-title{font-family:var(--font-display);font-weight:500;font-size:25px;margin-top:8px;line-height:1.2}
-.p-desc{font-size:14.5px;color:var(--text-2);margin-top:8px;flex-grow:1}
-.p-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.p-title{font-family:var(--font-display);font-weight:500;font-size:24px;margin-top:8px;line-height:1.2}
+.p-role{font-size:12.5px;color:var(--accent);margin-top:4px;font-weight:600}
+.p-desc{font-size:14.5px;color:var(--text-2);margin-top:10px;flex-grow:1}
+.p-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .p-tags span{
   font-family:var(--font-ui);font-size:11px;font-weight:700;
   padding:5px 12px;border-radius:999px;color:var(--btn-ink);
@@ -198,14 +174,16 @@ h2{
 .p-tags span:nth-child(3n+3){background:var(--accent-3)}
 .p-link{
   display:inline-flex;gap:8px;align-self:flex-start;
-  font-size:14px;font-weight:600;color:var(--text);margin-top:16px;
+  font-size:13.5px;font-weight:600;color:var(--text-2);margin-top:16px;
   transition:gap .25s,color .25s;
 }
 .p-link:hover{gap:13px;color:var(--accent)}
 
 /* ---------- SOBRE MÍ ---------- */
-.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:70px}
-.about-text p{margin-bottom:20px;color:var(--text-2)}
+#sobre-mi{padding-bottom:90px}
+.about-grid{display:block}
+.about-text{max-width:1200px}
+.about-text p{margin:0 0 32px;color:var(--text-2);font-size:15.5px;line-height:1.8}
 .about-text p strong{color:var(--text);font-weight:600}
 .about-text .quote{
   font-family:var(--font-display);font-style:italic;font-weight:500;
@@ -216,6 +194,7 @@ h2{
 .about-text .quote em{
   background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
 }
+.stack{margin-top:48px}
 .stack h3{
   font-family:var(--font-ui);
   font-size:12px;font-weight:500;color:var(--accent);margin-bottom:14px;
@@ -264,18 +243,14 @@ h2{
   .hero-sticker{width:150px;order:-1}
 }
 @media (max-width:900px){
-  .service{grid-template-columns:52px 1fr;grid-template-rows:auto auto auto}
+  .service{grid-template-columns:52px 1fr;grid-template-rows:auto auto}
   .service .s-desc{grid-column:2}
-  .service .s-tools{grid-column:2}
-  .about-grid{grid-template-columns:1fr;gap:48px}
 }
 @media (max-width:560px){
   body{padding-top:62px}
-  header{padding:40px 20px;min-height:calc(86vh - 62px)}
-  section{padding:80px 20px}
-  .nav-links{gap:16px}
-  .nav-links a{font-size:13px}
-  .projects{gap:48px 28px}
+  header{padding:40px 20px;min-height:auto}
+  section{padding:70px 20px}
+  .projects{gap:44px 24px}
   .edu-row{grid-template-columns:1fr auto}
   .edu-sub{grid-column:1 / -1}
 }
