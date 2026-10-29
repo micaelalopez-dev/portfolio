@@ -186,6 +186,8 @@ h2{
   transition:gap .25s,color .25s;
 }
 .p-link:hover{gap:13px;color:var(--accent)}
+.p-links{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:16px}
+.p-links .p-link{margin-top:0}
 
 /* ---------- SOBRE MÍ ---------- */
 #sobre-mi{padding-bottom:90px}
