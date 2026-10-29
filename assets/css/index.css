@@ -124,6 +124,9 @@ h2{
 .chip.re{background:#20232A;color:#61DAFB}
 .chip.no{background:#2E6B2E;color:#FFFFFF}
 .chip.gt{background:#F05033;color:#FFFFFF}
+.chip.gs{background:#4285F4;color:#FFFFFF}
+.chip.gc{background:#FFFFFF;color:#4285F4}
+.chip.ia{background:#57C7B0;color:#1B1330}
 .tool-logo{width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex:none}
 .tool-logo img{width:100%;height:100%;object-fit:contain;display:block}
 
@@ -259,12 +262,11 @@ h2{
   .edu-sub{grid-column:1 / -1}
 }
 
-/* ---------- AMPERSAND elegante (& de Playfair itálica) ---------- */
+/* ---------- AMPERSAND (Quiche Sans itálica, mismo criterio que los títulos) ---------- */
 .amp{
-  font-family:'EB Garamond','Playfair Display',serif;
+  font-family:"quiche-sans",sans-serif;
   font-style:italic;
   font-weight:400;
   color:var(--accent);
-  font-size:1.06em;
   padding:0 .05em;
 }
